@@ -17,11 +17,11 @@ builder.Services.AddHttpClient();
 builder.Services.AddScoped<IHttpClientServiceImplementation, HttpClientService>();
 builder.Services.AddScoped<IHealthCheckService, HealthCheckService>();
 
-builder.Services.Configure<KestrelServerOptions>(options =>
-{
-    options.ConfigureHttpsDefaults(options =>
-        options.ClientCertificateMode = ClientCertificateMode.RequireCertificate);
-});
+//builder.Services.Configure<KestrelServerOptions>(options =>
+//{
+//    options.ConfigureHttpsDefaults(options =>
+//        options.ClientCertificateMode = ClientCertificateMode.RequireCertificate);
+//});
 
 var app = builder.Build();
 
