@@ -21,6 +21,8 @@ namespace NetlyncAPI.Services
 
             var resonse = JsonConvert.DeserializeObject<HealthCheckResDTO>(httpResponse.ResponseBody) ?? new HealthCheckResDTO();
 
+            resonse.status_details = string.IsNullOrEmpty(resonse.status_details) ? "This operation succeeded" : resonse.status_details;
+            resonse.operator_reference = string.IsNullOrEmpty(resonse.operator_reference) ? "My reference" : resonse.operator_reference;
             return resonse;
         }
     }
