@@ -2,6 +2,7 @@
 {
     public class HealthCheckReqDTO
     {
-        public string subscriber_id { get; set; }
+        public string transaction_id { get; set; }
+        public string correlation_id { get; set; }
     }
 }
